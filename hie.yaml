@@ -1,0 +1,4 @@
+cradle:
+  cabal:
+    - path: "./Main.hs"
+      component: "kyopuro-template:exe:kyopuro-template"
