@@ -1,5 +1,6 @@
 #[allow(unused_imports)]
 use {
+    itertools,
     proconio::input,
     std::collections::*
 };
