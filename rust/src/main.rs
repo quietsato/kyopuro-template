@@ -1,13 +1,13 @@
+#[rustfmt::skip]
 #[allow(unused_imports)]
 use {
     itertools,
-    proconio::input,
+    whiteread::*,
     std::collections::*
 };
 
 #[allow(dead_code)]
-mod util {
-}
+mod util {}
 
 #[cfg(test)]
 mod test {}
@@ -16,11 +16,9 @@ mod test {}
 fn main() {
     use util::*;
 
-    input! {
-        a: i64,
-        (b, c): (i64, i64),
-        s: String
-    };
+    let a: i64 = parse_line().unwrap();
+    let (b, c): (i64, i64) = parse_line().unwrap();
+    let s: String = parse_line().unwrap();
 
     println!("{} {}", a + b + c, s);
 }
