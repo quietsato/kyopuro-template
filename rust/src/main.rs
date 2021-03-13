@@ -1,7 +1,7 @@
 #[rustfmt::skip]
 #[allow(unused_imports)]
 use {
-    itertools,
+    itertools::*,
     whiteread::*,
     std::collections::*
 };
