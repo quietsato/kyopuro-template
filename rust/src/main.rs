@@ -1,11 +1,5 @@
-#[rustfmt::skip]
-#[allow(unused_imports)]
-use {
-    itertools,
-    whiteread::parse_line
-};
-
-use std::*;
+use itertools;
+use whiteread::parse_line;
 
 fn main() {
     let a: i64 = parse_line().unwrap();
