@@ -40,7 +40,24 @@
   },
   "MOD 10^9+7": {
     "prefix": "mod_10^9",
-    "body": ["let MOD = BigUint::from(1_000_000_007u64);"],
+    "body": [
+      "let MOD = BigUint::from(1_000_000_007u64);"
+    ],
     "description": "MOD 10^9+7"
+  },
+  "GCD": {
+    "prefix": "fn_gcd",
+    "body": [
+      "fn gcd(x: u64, y: u64) -> u64 {",
+      "    let (a, b) = (x.max(y), x.min(y));",
+      "",
+      "    if a % b == 0 {",
+      "        b",
+      "    } else {",
+      "        gcd(b, a % b)",
+      "    }",
+      "}"
+    ],
+    "description": "GCD"
   }
 }
