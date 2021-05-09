@@ -1,10 +1,12 @@
 use itertools::Itertools;
-use whiteread::parse_line;
+use proconio::input;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let a: i64 = parse_line()?;
-    let (b, c): (i64, i64) = parse_line()?;
-    let s: String = parse_line()?;
+    input! {
+        a: i64,
+        (b, c): (i64, i64),
+        s: String
+    }
 
     println!("{} {}", a + b + c, s);
 
