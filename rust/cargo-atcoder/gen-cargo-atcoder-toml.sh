@@ -22,10 +22,15 @@ dep_str=$(tail -n $tail_line_count $CARGO_TOML)
 
 ## Output cargo-atcoder.toml
 TEMPLATE_TOML="./cargo-atcoder-template.toml"
-OUTPUT_FILE_PATH="$HOME/.config/cargo-atcoder.toml"
+case "$(uname -s)" in
+    Darwin*) OUTPUT_FILE_PATH="$HOME/Library/Application Support/cargo-atcoder.toml";;
+    *) OUTPUT_FILE_PATH="$HOME/.config/cargo-atcoder.toml";;
+esac
 
-cp $TEMPLATE_TOML $OUTPUT_FILE_PATH
+echo $OUTPUT_FILE_PATH
 
-printf "$dep_str\n\n" >> $OUTPUT_FILE_PATH
-printf "[project]\ntemplate='''\n$main_str\n'''" >> $OUTPUT_FILE_PATH
+cp $TEMPLATE_TOML "$OUTPUT_FILE_PATH"
+
+printf "$dep_str\n\n" >> "$OUTPUT_FILE_PATH"
+printf "[project]\ntemplate='''\n$main_str\n'''" >> "$OUTPUT_FILE_PATH"
 
