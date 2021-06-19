@@ -1,14 +1,9 @@
 use itertools::Itertools;
 use proconio::input;
+use std;
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {
+fn main() {
     input! {
-        a: i64,
-        (b, c): (i64, i64),
-        s: String
+        n: usize
     }
-
-    println!("{} {}", a + b + c, s);
-
-    Ok(())
 }
