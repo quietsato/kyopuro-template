@@ -59,5 +59,16 @@
       "}"
     ],
     "description": "GCD"
+  },
+  "BTreeMap get_mut": {
+    "prefix": "bm_getmut",
+    "body": [
+      "if let Some(${1:variable}) = ${2:btreemap}.get_mut(${3:key}) {",
+      "    *${1:variable} ${4:expression};",
+      "} else {",
+      "    ${2:btreemap}.insert(${3:key}, ${5:new_value});",
+      "}"
+    ],
+    "description": "This snippet checks for the existence of an entry in BTreeMap. If the entry doesn't exist, creates it. Otherwise, returns it as a mutable reference."
   }
 }
