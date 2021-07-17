@@ -41,7 +41,7 @@
   "MOD 10^9+7": {
     "prefix": "mod_10^9+7",
     "body": [
-      "let MOD = 1_000_000_007;"
+      "const MOD: u64 = 1_000_000_007;"
     ],
     "description": "MOD 10^9+7"
   },
